@@ -37,7 +37,7 @@ JOIN pelicula p ON i.id_idioma = p.id_idioma
 JOIN inventario inv ON p.id_pelicula = inv.id_pelicula
 JOIN alquiler a ON inv.id_inventario = a.id_inventario
 JOIN cliente c ON a.id_cliente = c.id_cliente
-WHERE MONTH(a.fecha_alquiler) = 3 AND YEAR(a.fecha_alquiler) = 2005
+WHERE MONTH(a.fecha_alquiler) = 3 AND YEAR(a.fecha_alquiler) = 2004
 GROUP BY i.id_idioma, i.nombre;
 
 -- 5. Encuentra a los clientes que han alquilado todas las películas de una misma categoría.
